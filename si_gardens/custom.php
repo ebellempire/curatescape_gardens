@@ -404,7 +404,7 @@ function mh_display_map($type=null){
 						'shadow': new google.maps.MarkerImage(shadow),
 						title: status,
 					}).click(function() {
-						jQuery('#map_canvas').gmap('openInfoWindow', { 'content': '<div class="'+status+'"><div class="status">'+status+' garden</div><a href="' + root + '/items/show/' + item.id +'">' + item.title + '</a><div class="photo">'+item.thumbnail+'<a class="view-link" href="' + root + '/items/show/' + item.id +'">View <?php echo mh_item_label();?></a></div></div>' }, this);
+						jQuery('#map_canvas').gmap('openInfoWindow', { 'content': '<div class="'+status+'"><div class="status">'+status+' garden</div><a href="' + root + '/items/show/' + item.id +'">' + item.title + '</a><div class="photo"><img src="'+item.thumbnail+'"><a class="view-link" href="' + root + '/items/show/' + item.id +'">View <?php echo mh_item_label();?></a></div></div>' }, this);
 					});
 				});
 				//Hide Private markers and show explanation at certain zoom level
