@@ -41,13 +41,41 @@
 
 </div><!--end wrap-->
 
-<!-- begin webtrends, NOTE: add the actual webtrends code in here and reference webtrends folder on top level!!!! -->
+<!-- begin webtrends -->
 <?php
-// Add a single quote: 
-$root=$_SERVER['DOCUMENT_ROOT'];
-include("$root/webtrends/webtrends.php");
+//$root=$_SERVER['DOCUMENT_ROOT'];
+//include("$root/webtrends/webtrends.php");
+$webtrendsJS = WEB_ROOT . "/webtrends/webtrends.js";
 ?>
+<!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2016 Webtrends Inc.  All rights reserved. -->
+<!-- Version: 9.4.0 -->
+<!-- Tag Builder Version: 4.1  -->
+<!-- Created: 3/29/2016 3:41:14 PM -->
+<script src="<?php echo $webtrendsJS ?>" type="text/javascript"></script>
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
+<!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
+<!-- ----------------------------------------------------------------------------------- -->
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+}
+_tag.dcsCollect();
+//]]>
+</script>
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//logs1.smithsonian.museum/dcs27xvvsadzpxzf3808s8myb_2u1z/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.si.edu"/></div>
+</noscript>
+<!-- END OF SmartSource Data Collector TAG -->
 <!-- end webtrends -->
 </body>
-
 </html>
