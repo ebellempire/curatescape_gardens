@@ -49,7 +49,7 @@ if (!isset($required) && $type->isFileAllowed()):
 <!-- Adding a altenate/additional file input form requires adding the field name (eg contributed_file_02) to the array in plugins/Contribution/controllers/ContributionController.php on line 204 -->
 <fieldset>
 <h3>Upload Files</h3>
-<span id="upload">Please upload any files that illustrate your story. You can upload up to ten photo or audio files. The maximum file size is 7 MB. If you would like to share a video, or larger audio files, please email it directly to <a href="mailto:communityofgardens@si.edu" target="_blank">communityofgardens@si.edu</a> with the name of the garden in the subject line. </span>
+<span id="upload">Please upload up to 10 image or audio files that enrich your story. <strong>The maximum total file size is 7 MB. Please do not upload very large files, this could result in the loss of your story.</strong> If you are not sure of the size of your files or would like to share a video or larger audio/image files, please email the files directly to <a href="mailto:communityofgardens@si.edu" target="_blank">communityofgardens@si.edu</a>.</span>
 <?php for($i = 1; $i <= 10; $i++){
 	$name="contributed_file_$i";
 	

@@ -105,12 +105,12 @@ function mh_global_nav($includeExtra=true){
 	if(get_theme_option('default_nav')==1){
 		$navLinks=array(
 			array('label'=>'Home','uri' => url('/')),
-			array('label'=>mh_item_label('plural'),'uri' => url('items/browse')),
+			array('label'=>'Explore Gardens','uri' => url('items/browse')),
 			array('label'=>'Exhibits','uri' => url('/exhibits')),
 			array('label'=>'About','uri' => url('/about')),
 			array('label'=>'FAQs','uri' => url('/faq')),
 			array('label'=>'Education','uri' => url('/education')),
-			array('label'=>'Mobile App','uri' => 'http://s.si.edu/communityofgardensapp','target' => '_blank'),
+			array('label'=>'Mobile App','uri' => 'http://communityofgardens.si.edu/mobileapp','target' => '_blank'),
 			array('label'=>'Share A Story','uri' => url('/contribution'))
 			);
 		if($includeExtra==true){
