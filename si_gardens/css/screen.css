@@ -691,7 +691,7 @@ nav.secondary-nav ul {
 
 nav#primary-nav ul li,nav#footer-nav ul li {
 	display:inline;
-	padding:1em .4em;
+	padding:1em .3em;
 }
 
 nav.secondary-nav ul li {
@@ -1816,6 +1816,15 @@ footer .social-media a.icon-tumblr{
 	background:url(../images/social-media-icons.png) no-repeat -80px 0;
 }
 
+footer .apple-badge, footer .google-badge {
+	margin-bottom: 10px;
+}
+footer .google-badge {
+	height: 40px;
+	width: auto;
+	margin-left: 10px;
+}
+
 #app-store-links {
 	width:100%;
 	display:block;
@@ -2706,7 +2715,7 @@ body.contribution #hero, body.contribution #showmap, body.no-hero #hero, body.no
 	
 	nav#primary-nav ul {
 		font-size: .9em;
-		line-height:1.2em;
+		line-height:1.4em;
 		float:right;
 	}
 	
@@ -2928,7 +2937,7 @@ body.contribution #hero, body.contribution #showmap, body.no-hero #hero, body.no
 	}
 	
 	nav#primary-nav ul {
-		font-size: 1em;
+		font-size: .95em;
 	}
 	
 	nav#primary-nav ul li a.nav-share-a-story{
@@ -3289,7 +3298,7 @@ body.contribution #hero, body.contribution #showmap, body.no-hero #hero, body.no
 		width:70%;
 		float:left;
 		text-align:left;
-		font-size:1em;
+		font-size:.95em;
 		margin-top:.5em;	
 	}
 	nav#footer-nav #search-wrap{
@@ -3299,7 +3308,7 @@ body.contribution #hero, body.contribution #showmap, body.no-hero #hero, body.no
 		margin:0;	
 	}
 	footer input#search {
-		width:94%;
+		width:85%;
 		max-width:20em;
 	}
 
