@@ -110,7 +110,7 @@ function mh_global_nav($includeExtra=true){
 			array('label'=>'About','uri' => url('/about')),
 			array('label'=>'FAQs','uri' => url('/faq')),
 			array('label'=>'Education','uri' => url('/education')),
-			array('label'=>'Mobile App','uri' => 'http://communityofgardens.si.edu/mobileapp','target' => '_blank'),
+			array('label'=>'Mobile App','uri' => 'https://communityofgardens.si.edu/mobileapp','target' => '_blank'),
 			array('label'=>'Share A Story','uri' => url('/contribution'))
 			);
 		if($includeExtra==true){
@@ -501,7 +501,7 @@ function mh_appstore_downloads(){
 
 		$android_app_id = get_theme_option('android_app_id');
 		echo ($android_app_id ?
-			'<a id="android" class="app-store" href="http://play.google.com/store/apps/details?id='.$android_app_id.'">
+			'<a id="android" class="app-store" href="https://play.google.com/store/apps/details?id='.$android_app_id.'">
 		Google Play
 		</a> ':'<a id="android" class="app-store" href="#">
 		Coming Soon
@@ -525,10 +525,10 @@ function mh_appstore_footer(){
 			echo 'Get the app for <a id="apple-text-link" class="app-store-footer" href="https://itunes.apple.com/us/app/'.$ios_app_id.'">iPhone</a>';
 		}
 		elseif (($ios_app_id == false) && ($android_app_id != false)) {
-			echo 'Get the app for <a id="apple-text-link" class="app-store-footer" href="http://play.google.com/store/apps/details?id='.$android_app_id.'">Android</a>';
+			echo 'Get the app for <a id="apple-text-link" class="app-store-footer" href="https://play.google.com/store/apps/details?id='.$android_app_id.'">Android</a>';
 		}
 		elseif (($ios_app_id != false)&&($android_app_id != false)) {
-			echo 'Get the app for <a id="apple-text-link" class="app-store-footer" href="https://itunes.apple.com/us/app/'.$ios_app_id.'">iPhone</a> and <a id="android-text-link" class="app-store-footer" href="http://play.google.com/store/apps/details?id='.$android_app_id.'">Android</a>';
+			echo 'Get the app for <a id="apple-text-link" class="app-store-footer" href="https://itunes.apple.com/us/app/'.$ios_app_id.'">iPhone</a> and <a id="android-text-link" class="app-store-footer" href="https://play.google.com/store/apps/details?id='.$android_app_id.'">Android</a>';
 		}
 		else{
 			echo 'iPhone + Android Apps Coming Soon!';
@@ -982,8 +982,8 @@ function mh_disquss_comments(){
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 	<?php
 	}
 }
@@ -1187,7 +1187,7 @@ function mh_home_find_us(){
 	$service=array();
 	($twitter=get_theme_option('twitter_username')) ? array_push($service,'<a href="https://twitter.com/'.$twitter.'">Twitter</a>') : null;
 	($facebook=get_theme_option('facebook_link')) ? array_push($service,'<a href="'.$facebook.'">Facebook</a>') : null;
-	($youtube=get_theme_option('youtube_username')) ? array_push($service,'<a href="http://www.youtube.com/user/'.$youtube.'">Youtube</a>') : null;
+	($youtube=get_theme_option('youtube_username')) ? array_push($service,'<a href="https://www.youtube.com/user/'.$youtube.'">Youtube</a>') : null;
 	
 	if(count($service)>0){
 		$findus='Find us on '.join(' | ',$service);
@@ -1262,7 +1262,7 @@ function mh_custom_css(){
 */
 function mh_typekit(){
 	if(get_theme_option('typekit')){
-		$html ='<script type="text/javascript" src="http://use.typekit.com/'.get_theme_option('typekit').'.js"></script>';
+		$html ='<script type="text/javascript" src="https://use.typekit.com/'.get_theme_option('typekit').'.js"></script>';
 		$html .='<script type="text/javascript">try{Typekit.load();}catch(e){}</script>';
 		return $html;
 	}
@@ -1278,7 +1278,7 @@ function mh_about($text=null){
 		$text =
 			get_theme_option('about') ?
 			get_theme_option('about') :
-			option('site_title').' is powered by <a href="http://omeka.org/">Omeka</a> + <a href="http://curatescape.org/">Curatescape</a>, a humanities-centered web and mobile framework available for both Android and iOS devices. ';
+			option('site_title').' is powered by <a href="https://omeka.org/">Omeka</a> + <a href="https://curatescape.org/">Curatescape</a>, a humanities-centered web and mobile framework available for both Android and iOS devices. ';
 	}
 	return $text;
 }
@@ -1484,8 +1484,8 @@ function mh_showmap(){
 
 function mh_legal_nav($html=''){
 	$html .= '<li><a href="mailto:communityofgardens@si.edu">Contact webmaster</a></li>';
-	$html .= '<li><a href="http://www.si.edu/privacy/" target="_blank">Privacy Policy</a></li>';
-	$html .= '<li><a href="http://www.si.edu/Termsofuse" target="_blank">Terms of use</a></li>';
+	$html .= '<li><a href="https://www.si.edu/privacy/" target="_blank">Privacy Policy</a></li>';
+	$html .= '<li><a href="https://www.si.edu/Termsofuse" target="_blank">Terms of use</a></li>';
 	$html .= '<li><a href="'.WEB_ROOT.'/submission-agreement">Submission Agreement</a></li>';
 	
 	return $html;
@@ -1499,9 +1499,9 @@ function social_media($html=''){
 	$html .= '<br>';
 	$html .= '<a href="https://www.facebook.com/SmithsonianGardens" class="icon-fb" target="_blank"></a>';
 	$html .= '<a href="https://twitter.com/SIGardens" class="icon-tw" target="_blank"></a>';
-	$html .= '<a href="http://instagram.com/SmithsonianGardens" class="icon-instagram" target="_blank"></a>';
-	$html .= '<a href="http://www.pinterest.com/sigardens/" class="icon-pinterest" target="_blank"></a>';
-	$html .= '<a href="http://www.tumblr.com/tagged/smithsonian-gardens" class="icon-tumblr" target="_blank"></a>';
+	$html .= '<a href="https://instagram.com/SmithsonianGardens" class="icon-instagram" target="_blank"></a>';
+	$html .= '<a href="https://www.pinterest.com/sigardens/" class="icon-pinterest" target="_blank"></a>';
+	$html .= '<a href="https://www.tumblr.com/tagged/smithsonian-gardens" class="icon-tumblr" target="_blank"></a>';
 	
 	return $html;
 }

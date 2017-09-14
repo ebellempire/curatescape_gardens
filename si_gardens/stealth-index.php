@@ -86,6 +86,6 @@ echo head_css();
 		
 		</div> <!-- end columns -->
 
-<a href="http://curatescape.org/" style="border:none; opacity:.65; color:transparent;"><img title="Powered by Curatescape" alt="Powered by Curatescape" style="width:85%; max-width: 10em; margin: 1em 0 1em;" src="<?php echo img('curatescape-logo.png');?>"></a>
+<a href="https://curatescape.org/" style="border:none; opacity:.65; color:transparent;"><img title="Powered by Curatescape" alt="Powered by Curatescape" style="width:85%; max-width: 10em; margin: 1em 0 1em;" src="<?php echo img('curatescape-logo.png');?>"></a>
 
 </div> <!-- end content -->
