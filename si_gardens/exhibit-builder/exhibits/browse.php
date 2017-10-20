@@ -1,23 +1,23 @@
 <?php 
-$tag = (isset($_GET['tag']) ? $_GET['tag'] : null);
-$tags = (isset($_GET['tags']) ? $_GET['tags'] : null);
-$term = (isset($_GET['term']) ? $_GET['term'] : null);
-$query = (isset($_GET['search']) ? $_GET['search'] : null);
-$advanced = (isset($_GET['advanced']) ? true : false);
+$tag = html_escape(isset($_GET['tag']) ? $_GET['tag'] : null);
+$tags = html_escape(isset($_GET['tags']) ? $_GET['tags'] : null);
+$term = html_escape(isset($_GET['term']) ? $_GET['term'] : null);
+$query = html_escape(isset($_GET['search']) ? $_GET['search'] : null);
+$advanced = html_escape(isset($_GET['advanced']) ? true : false);
 $bodyclass='browse';
 $maptype='focusarea';
 
-if ( (isset($tag) || isset($tags)) && !isset($query) ) {
+if ( ($tag || $tags) && !($query) ) {
 	$title = __('Exhibits tagged "%s"',($tag ? $tag : $tags));
 	$bodyclass .=' queryresults';
 	$maptype='queryresults';
 }
-elseif ( isset($term) && !isset($query) ) {
+elseif ( $term && !($query) ) {
 	$title = __('Results for subject term "%s"',$term);
 	$bodyclass .=' queryresults';
 	$maptype='queryresults';
 }
-elseif (isset($query)) {
+elseif ( $query ) {
 	$title = (!($advanced) ? __('Search Results for "%s"',$query) :__('Advanced Search Results'));
 	$bodyclass .=' queryresults';
 	$maptype='queryresults';

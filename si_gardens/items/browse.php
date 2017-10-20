@@ -1,9 +1,9 @@
 <?php 
-$tag = (isset($_GET['tag']) ? $_GET['tag'] : null); // items --> browse
-$tags = (isset($_GET['tags']) ? $_GET['tags'] : null); // tags/items --> show
-$subj = ( (isset($_GET['advanced'][0]['element_id']) && $_GET['advanced'][0]['element_id'] == 49 )  ? $_GET['advanced'][0]['terms'] : null );
-$auth= ( (isset($_GET['advanced'][0]['element_id']) && $_GET['advanced'][0]['element_id'] == 39 )  ? $_GET['advanced'][0]['terms'] : null );
-$query = (isset($_GET['search']) ? $_GET['search'] : null);
+$tag = html_escape(isset($_GET['tag']) ? $_GET['tag'] : null); // items --> browse
+$tags = html_escape(isset($_GET['tags']) ? $_GET['tags'] : null); // tags/items --> show
+$subj = html_escape( (isset($_GET['advanced'][0]['element_id']) && $_GET['advanced'][0]['element_id'] == 49 )  ? $_GET['advanced'][0]['terms'] : null );
+$auth= html_escape( (isset($_GET['advanced'][0]['element_id']) && $_GET['advanced'][0]['element_id'] == 39 )  ? $_GET['advanced'][0]['terms'] : null );
+$query = html_escape(isset($_GET['search']) ? $_GET['search'] : null);
 $bodyclass='browse';
 $maptype='focusarea';
 

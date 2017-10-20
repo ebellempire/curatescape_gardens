@@ -460,7 +460,7 @@ function mh_simple_search($formProperties=array(), $uri = null){
         $uri = url('items/browse');
     }
     
-    $searchQuery = array_key_exists('search', $_GET) ? $_GET['search'] : '';
+    $searchQuery = array_key_exists('search', $_GET) ? html_escape($_GET['search']) : '';
     $formProperties['action'] = $uri;
     $formProperties['method'] = 'get';
     $html = '<form ' . tag_attributes($formProperties) . '>' . "\n";
